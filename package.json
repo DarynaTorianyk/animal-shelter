@@ -1,0 +1,25 @@
+{
+  "name": "animal-shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "node-sass -w ./src/scss -o ./src/css",
+    "browsersync": "browser-sync start --server --files '**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarynaTorianyk/animal-shelter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarynaTorianyk/animal-shelter/issues"
+  },
+  "homepage": "https://github.com/DarynaTorianyk/animal-shelter#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
