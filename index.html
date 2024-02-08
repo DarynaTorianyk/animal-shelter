@@ -4,7 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Work+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>Animal Shelter</title>
   </head>
-  <body></body>
+  <body>
+    <section class="header">
+      <div class="wrapper">
+        <img
+          class="logo-dekstop"
+          src="./src/assets/logo-dekstop.svg"
+          alt="logo-dekstop"
+        />
+        <img
+          class="logo-mobile"
+          src="./src/assets/logo-mobile.svg"
+          alt="logo-mobile"
+        />
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">Home</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">About us</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">Faithful friends</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">Our conditions</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">Location</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bodyBtnPopUP">
+          <button type="button" class="btnPopUp">
+            <img
+              class="arrowIcon"
+              src="./src/assets/icon-arrow.svg"
+              alt="icon-arrow"
+            />
+            <span class="text"> Language | Country</span>
+          </button>
+        </div>
+        <div class="popupWindow">
+          <div class="popupContainer">
+            <div class="popupForm" class="hidden">
+              <form>
+                <div class="select-title">
+                  <h1 class="popupTitle">select your country</h1>
+                  <select class="country" name="country">
+                    <option class="optC" value="Ukraine">Ukraine</option>
+                    <option class="optC" value="Poland">Poland</option>
+                  </select>
+                  <select class="language" name="language">
+                    <option class="optL" value="Ukrainian">Ukrainian</option>
+                    <option class="optL" value="Polish">Polish</option>
+                  </select>
+                  <button class="applyBtn" type="button">Apply</button>
+                </div>
+              </form>
+              <div class="popupClose">
+                <img src="./src/assets/popupClose.svg" alt="popupClose" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="helpBtn" type="button">Help</button>
+        <div class="menu-icon">
+          <span></span>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
 </html>
