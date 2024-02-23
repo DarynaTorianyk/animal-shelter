@@ -1,0 +1,356 @@
+.wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.logo-dekstop {
+    width: 212px;
+    height: 62px;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .logo-dekstop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: flex;
+    }
+
+    .helpBtn {
+       margin-right: 18px;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .menu-icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .menu-icon span, .menu-icon::before, .menu-icon::after  {
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        transition: all 0.3s ease 0s;
+        background-color: #EF3959;
+    }
+
+    .menu-icon::before, .menu-icon::after {
+        content: "";
+    }
+
+    .menu-icon::before {
+        top: 0;
+    }
+
+    .menu-icon::after {
+        bottom: 0;
+    }
+
+    .menu-icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu-icon.active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    
+    .menu-icon.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    
+    .menu-icon.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+}
+
+.menu-list {
+    display: flex;
+    padding: 0px;
+
+    &__link {
+        font-size: 18px;
+        font-family: Poppins;
+        white-space: nowrap;
+    }
+
+    &__link:hover {
+      text-decoration: underline;
+    }
+
+    &__item {
+        list-style-type: none;
+
+        &:not(:last-child){
+            margin-right: 23px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+       position: fixed;
+       top: 0;
+       right: -100%;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.6);
+       padding: 80px 0 0 0;
+       transition: right 0.4s ease 0s;
+       overflow: auto;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        &__link {
+            font-size: 25px;
+            color: white;
+        }
+
+        &__item {
+            list-style-type: none;
+    
+            &:not(:last-child){
+                margin-bottom: 20px;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .menu.active {
+        right: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.btnPopUp {
+    display: flex;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+}
+
+.text {
+    font-family: Poppins;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.arrowIcon {
+    margin-right: 5px;
+}
+
+.popupWindow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
+    transform: translateY(-44.5%) translateX(22.5%) scale(0);
+    transition: .4s ease-in-out;
+}
+
+.popupWindow.active {
+    transform: translateY(0%) translateX(0%) scale(100%);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popupContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.popupForm {
+   margin: auto;
+   width: 500px;
+   background-color: #fff;
+   border-radius: 10px;
+   text-align: center;
+   padding: 70px 15px 110px 15px;
+   position: relative;
+
+   .select-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin: 10px auto;
+
+    .popupTitle {
+        text-align: left;
+        text-transform: uppercase;
+        font-family: Poppins;
+        margin-bottom: 30px;
+       }
+
+       .country, .language {
+        font-size: 18px;
+        font-family: Poppins;
+        margin-bottom: 15px;
+        padding: 3px 16px;
+        height: 45px;
+        border: 1px solid #c7ccd1;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+       }
+
+       .applyBtn {
+        font-size: 18px;
+        font-family: Poppins;
+        font-weight: 600;
+        background-color: #EF3959;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        height: 45px;
+       }
+   }
+}
+
+.popupClose {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .btnPopUp {
+        margin-left: 110px;
+    }
+
+    .popupWindow {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: 2;
+        transform: translateY(-44.5%) translateX(0.5%) scale(0);
+        transition: .4s ease-in-out;
+    }
+
+    .popupForm {
+        width: 500px;
+        padding: 20px 15px 80px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btnPopUp {
+        display: none;
+    }
+
+    .arrowIcon {
+        margin-right: 5px;
+        background: white;
+    }
+
+    .text {
+        font-family: Poppins;
+        font-size: 25px;
+        color: white;
+    }    
+
+    .menu.active .btnPopUp {
+        display: flex;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .popupForm {
+        width: 380px;
+    }
+
+    .country, .language {
+        width: 380px;
+    }
+
+    .applyBtn {
+        width: 380px;
+    }
+}
+
+@media (max-width: 375px) {
+    .popupForm {
+        width: 320px;
+    }
+
+    .country, .language {
+        width: 320px;
+    }
+
+    .applyBtn {
+        width: 320px;
+    }
+}
+
+@media (max-width: 320px) {
+    .popupForm {
+        width: 280px;
+    }
+
+    .country, .language {
+        width: 280px;
+    }
+
+    .applyBtn {
+        width: 280px;
+    }
+}
+
+.helpBtn {
+    width: 213px;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 27px;
+    font-family: Poppins;
+    font-weight: 600;
+    background: $helpBtn-background-color;
+    border: none;
+    color: $helpBtn-text-color;
+    box-shadow: 0px 0px 40px 0px rgba(239, 57, 89, 0.4);
+}
