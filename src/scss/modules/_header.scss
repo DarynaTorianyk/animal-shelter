@@ -343,6 +343,7 @@
 }
 
 .helpBtn {
+    cursor: pointer;
     width: 213px;
     height: 60px;
     border-radius: 25px;
@@ -351,6 +352,6 @@
     font-weight: 600;
     background: $helpBtn-background-color;
     border: none;
-    color: $helpBtn-text-color;
+    color: $btn-text-color;
     box-shadow: 0px 0px 40px 0px rgba(239, 57, 89, 0.4);
 }

@@ -1,0 +1,205 @@
+.aboutShelter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image1 {
+    margin-left: 47px;
+}
+
+.decorImg {
+	width: 420px;
+}
+
+.title {
+	font-family: Poppins;
+    text-transform: uppercase;
+    color: #EF3959;
+    margin-bottom: 0;
+}
+
+.subTitle {
+	font-family: Poppins;
+    font-size: 23px;
+    white-space: pre-line;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.moreDet {
+    margin-right: 32px;
+}
+
+.moreDetBtn {
+	width: 250px;
+	border-radius: 25px 25px 25px 0px;
+	height: 60px;
+	margin-top: 85px;
+	position: relative;
+	background: linear-gradient(93.62deg, #4A86FF 3.11%, #F5F5F5 50.76%, #EF3959 98.4%);
+	cursor: pointer;
+	line-height: 12px;
+	border: none;
+}
+
+.moreDetBtn::before {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	background: linear-gradient(93.62deg, #4A86FF 3.11%, #F5F5F5 50.76%, #EF3959 98.4%);
+	width: 98%;
+	height: 87%;
+	top: 6%;
+	left: 1%;
+	display: block;
+	filter: blur(15px);
+	opacity: 0;
+	transition: 0.3s opacity ease-in-out;
+}
+
+.moreDetBtn:hover::before {
+	opacity: 1;
+	transition: 0.3s opacity ease-in-out;
+	filter: blur(25px);
+	background: linear-gradient(93.62deg, #4A86FF 3.11%, #F5F5F5 50.76%, #EF3959 98.4%);
+}
+
+.moreDetBtn:after {
+	content: 'More detailes';
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+	font-family: Poppins;
+	line-height: 50px;
+	color: #EF3959;
+	z-index: 5;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px 25px 25px 0px;
+	width: 98%;
+	height: 87%;
+	top: 6%;
+	left: 1%;
+	background-color: white;
+}
+
+@media (max-width: 1024px) {
+	.aboutShelter {
+		align-items: center;
+	}
+
+	.moreDet {
+		margin-left: 50px;
+	}
+
+	.moreDetBtn {
+		margin-top: 35px;
+	}
+}
+
+@media (max-width: 768px) {
+	.aboutShelter {
+		align-items: center;
+	}
+
+	.decorImg {
+		width: 350px;
+	}
+
+	.moreDet {
+		margin-left: 30px;
+	}
+
+	.title {
+		font-size: 26px;
+	}
+
+	.subTitle {
+		font-size: 17px;
+	}
+
+	.moreDetBtn {
+		margin-top: 35px;
+	}
+}
+
+@media (max-width: 425px) {
+    .aboutShelter {
+        flex-direction: column;
+		align-items: center;
+    }
+
+	.image1 {
+		order: 1;
+		margin-top: 30px;
+	}
+
+	.decorImg {
+		margin-right: 30px;
+	}
+
+	.titleAboutUs {
+		display: flex;
+		justify-content: center;
+		order: 2;
+
+		.title {
+			font-size: 35px;
+		}
+	}
+
+	.subTitle {
+		margin-left: 12px;
+		font-size: 16px;
+	}
+
+	.moreDetBtn {
+		width: 330px;
+		margin-left: 12px;
+	}
+}
+
+@media (max-width: 375px) {
+	.title {
+        font-size: 35px;
+	}
+
+	.subTitle {
+		font-size: 17px;
+	}
+
+	.moreDet {
+		margin-right: 0;
+	}
+
+	.moreDetBtn {
+		width: 323px;
+	}
+
+	.decorImg {
+		width: 325px;
+		margin-right: 0;
+	}
+}
+
+
+@media (max-width: 320px) {
+	.title {
+		font-size: 25px;
+		margin: 0;
+	}
+
+	.subTitle {
+		font-size: 15px;
+	}
+
+	.moreDetBtn {
+		width: 280px;
+	}
+
+    .decorImg {
+        width: 300px;
+    }
+}

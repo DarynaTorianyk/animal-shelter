@@ -1,0 +1,140 @@
+.infoBlocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.selectBtn {
+    margin-left: 47px;
+}
+
+.image {
+    margin-left: 35px;
+}
+
+.img {
+    width: 420px;
+}
+
+.titleBlock {
+    font-family: Poppins;
+    text-transform: uppercase;
+    color: #EF3959;
+    margin-bottom: 0;
+}
+
+.subTitleBlock {
+    font-family: Poppins;
+    font-size: 23px;
+    white-space: pre-line;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.chooseBtn {
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    margin-top: 85px;
+    border-radius: 25px 25px 25px 0px;
+    font-size: 27px;
+    font-family: Poppins;
+    font-weight: 600;
+    background: $helpBtn-background-color;
+    border: none;
+    color: $btn-text-color;
+    box-shadow: 0px 0px 40px 0px rgba(239, 57, 89, 0.4);
+}
+
+@media (max-width: 768px) {
+    .infoBlocks {
+        margin-bottom: 60px;
+    }
+
+    .img {
+        width: 350px;
+    }
+
+    .titleBlock {
+        font-size: 26px;
+    }
+
+    .subTitleBlock {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .infoBlocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        order: 1;
+        margin-top: 30px;
+    }
+
+    .img {
+        margin-right: 30px;
+    }
+
+    .titleBlock {
+        font-size: 35px;
+    }
+
+    .subTitleBlock {
+        font-size: 18px;
+    }
+
+    .chooseBtn {
+        width: 330px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 375px) {
+    .selectBtn {
+        margin-left: 30px;
+    }
+
+    .titleBlock {
+        font-size: 35px;
+    }
+
+    .subTitleBlock {
+        font-size: 19px;
+    }
+
+    .chooseBtn {
+        width: 320px;
+        margin-top: 25px;
+    }
+
+    .img {
+        width: 325px;
+    }
+}
+
+@media (max-width: 320px) {
+    .selectBtn {
+        margin-left: 30px;
+    }
+
+    .titleBlock {
+        font-size: 25px;
+    }
+
+    .subTitleBlock {
+        font-size: 15px;
+    }
+
+    .chooseBtn {
+        width: 260px;
+        margin-top: 25px;
+    }
+    
+    .img {
+        width: 300px;
+    }
+}
